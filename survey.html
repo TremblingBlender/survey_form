@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Musicians Survey</title>
+        <link rel="stylesheet" type="text/css" href="surveystyle.css">
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1 id="title">Musicians Survey</h1>
+        <div id="form-outer">
+            <br>
+            <p id="description">Let us know what it's like being a musician.</p>
+
+            <form id="survey-form" method="GET" action="https://crossorigin.me/https://freecodecamp.com">
+
+                <div class="row">
+                    <div class="labels">
+                        <label id="name-label" for="name">* Name: </label>
+                    </div>
+                    <div class="right">
+                        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+                    </div>
+                    <div class="labels">
+                        <label id="email" for="email">* Email: </label>
+                    </div>
+                    <div class="right">
+                        <input type="email" name="email" class="input-field" required placeholder="Enter your email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="labels">
+                        <label id="number" for="age">* Age:</label>
+                    </div>
+                    <div class="right">
+                        <input type="number" name="age" id="number" min="1" max="99" class="input-field" required placeholder="Age">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="labels">
+                        <label id="dropdown" for="instrument">* What instrument do you play?</label>
+                    </div>
+                    <div class="right">
+                        <select id="dropdown" name="instrument" class="dropdown">
+                            <option disabled selected value>Choose your instrument</option>
+                            <option value="guitar">Guitar</option>
+                            <option value="bass">Bass</option>
+                            <option value="drums">Drums</option>
+                            <option value="keyboard">Keyboard</option>
+                            <option value="other">Other</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="labels">
+                        <label id="other-musicians" for="others">* How likely are you to play with other musicians in your area?
+                        </label>
+                    </div>
+                    <div class="right">
+                        <ul id="preferences">
+                            <li class="radio"><label><input name="radio-buttons" value="1" type="radio"/> Highly likely</label></li>
+                            <li class="radio"><label><input name="radio-buttons" value="2" type="radio"/> Somewhat likely</label></li>
+                            <li class="radio"><label><input name="radio-buttons" value="3" type="radio"/> Likely</label></li>
+                            <li class="radio"><label><input name="radio-buttons" value="4" type="radio"/> Unlikely</label></li>
+                            <li class="radio"><label><input name="radio-buttons" value="5" type="radio"/> Highly unlikely</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="labels">
+                        <label id="other-instruments" for="other-inst">* What other instruments do you play? (Select all that apply)
+                        </label>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li class="checkbox"><label><input name="checkbox" value="1" type="checkbox"/>Guitar</label></li>
+                            <li class="checkbox"><label><input name="checkbox" value="2" type="checkbox"/>Bass</label></li>
+                            <li class="checkbox"><label><input name="checkbox" value="3" type="checkbox"/>Drums</label></li>
+                            <li class="checkbox"><label><input name="checkbox" value="4" type="checkbox"/>Keyboards</label></li>
+                            <li class="checkbox"><label><input name="checkbox" value="5" type="checkbox"/>Other</label></li>
+                            <li class="checkbox"><label><input name="checkbox" value="6" type="checkbox"/>None</label></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="labels">
+                        <label id="other-instruments" for="other-inst">Any other comments?
+                        </label>
+                    </div>
+                    <div class="right">
+                        <textarea placeholder="Please leave your comments here."></textarea>
+                    </div>
+                </div>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+            <br>
+        </div>
+    </body>
+</html>
